@@ -21,7 +21,7 @@ import clinica.cosmetica.dto.ConsultaDTO;
 import clinica.cosmetica.entities.Consulta;
 import clinica.cosmetica.service.ConsultaService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/consultas")
 public class ConsultaController {

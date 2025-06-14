@@ -9,11 +9,10 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-            .allowedOrigins("https://front-visage.vercel.app/", "https://clinica-axcehzebdvdxd8fa.brazilsouth-01.azurewebsites.net") // Domínio do front-end
-            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-            .allowedHeaders("*");
-            
-    }
+    	registry.addMapping("/**")  // todas rotas
+        .allowedOrigins("http://localhost:3000")  // origem exata do frontend
+        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+        .allowCredentials(true);
+}
 }
 

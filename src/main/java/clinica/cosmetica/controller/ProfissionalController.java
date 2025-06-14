@@ -15,7 +15,7 @@ import clinica.cosmetica.dto.LoginDTO;
 import clinica.cosmetica.entities.Profissional;
 import clinica.cosmetica.repository.ProfissionalRepository;
 import clinica.cosmetica.service.AuthService;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/profissionais")
 public class ProfissionalController {

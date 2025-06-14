@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import clinica.cosmetica.dto.LoginDTO;
 import clinica.cosmetica.entities.Paciente;
 import clinica.cosmetica.repository.PacienteRepository;
 import clinica.cosmetica.service.AuthService;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
